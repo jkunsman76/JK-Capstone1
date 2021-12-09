@@ -18,7 +18,7 @@ export const NavBar = () => {
                             {
                                 !isAuthenticated()
                                     ? <Link className="nav-link" to="/register">Register</Link>
-                                    : getCurrentUser().name
+                                    : <Link className="nav-link" to="/campsites">{getCurrentUser().name}</Link>
                             }
                         </li>
                         <li className="navbar__item">

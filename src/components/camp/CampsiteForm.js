@@ -14,17 +14,10 @@ export default () => {
     const [campsite, updateCampsite] = useState({})
     const [userId, setuserId] = useState({})
     const { getCurrentUser } = useSimpleAuth()
-    
+
     useEffect(() => {
         setuserId(getCurrentUser)
     }, [])
-    
-    // UserRepository.getAll()
-    //     .then((res) => {
-    //         setEmployees(res)
-    //     })
-
-    
 
     const history = useHistory()
 

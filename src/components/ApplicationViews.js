@@ -1,5 +1,5 @@
 import React from "react"
-import { Route } from "react-router-dom"
+// import { Route } from "react-router-dom"
 import CampsiteRoutes from "./CampsiteRoutes.js"
 // ApplicationViews works in tandem with NavBar
 // Route is listneing for the click event in the NavBar, and when the

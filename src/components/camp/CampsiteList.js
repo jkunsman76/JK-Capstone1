@@ -4,7 +4,7 @@ import CampsiteRepository from "../../repos/CampsiteRepository";
 import "./CampsiteList.css"
 
 
-//! need to make toilets the Favorite star!!!!!!!!!
+//! need to change toilets to Favorite star!!!!!!!!!
 
 export const CampsiteList = () => {
     const [campsites, updateCampsites] = useState([])
@@ -29,17 +29,17 @@ export const CampsiteList = () => {
                         (site) => {
                             return <p className={'sites'} key={`campsite--${site.id}`}>
 
-                               <button onClick={() => history.push(`/campsites/${site.id}`)}
-                               
-                               
-                               >{site.name}, in {site.cityState}, Near {site.majorCity}, {`${site.price}` > 0 ? `$${site.price} per night`: 'Free to Camp!!!'}. {`${site.toilets}` === "true" ? "⭐": ""} </button>
+                                <button onClick={() => history.push(`/campsites/${site.id}`)}
+
+
+                                >{site.name}, in {site.cityState}, Near {site.majorCity}, {`${site.price}` > 0 ? `$${site.price} per night` : 'Free to Camp!!!'}. {`${site.toilets}` === "true" ? "⭐" : ""} </button>
 
                             </p>
                         }
                     )
                 }
             </div>
-            
+
         </>
     )
 }
