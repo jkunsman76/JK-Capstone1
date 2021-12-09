@@ -16,6 +16,9 @@ export default () => {
             <Route path="/campsites/create">
                 <CampsiteForm />
             </Route>
+            <Route path="/campsites/create">
+                <CampsiteForm />
+            </Route>
             <Route path="/campsites/:campsiteId(\d+)">
                 <CampsiteDetails />
             </Route>
