@@ -1,0 +1,84 @@
+/* Import the google web fonts you want to use */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Patua+One');
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: 'Comfortaa', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+h1 {
+  font-family: 'Patua One', serif;
+  text-align: center;
+  font-size: 60px;
+}
+h2 {
+  font-family: 'Patua One', serif;
+  font-size: 32px;
+}
+
+h3,h4,h5,h6 {
+  font-family: 'Patua One', serif;
+  letter-spacing: 2px;
+}
+
+p {
+  margin-bottom: 1.5em;
+  color: #d6fcff;
+  color: rgb(32, 25, 95);
+}
+
+strong {
+  font-weight: bold;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+
+.container--login {
+  text-align: center;
+  min-height: 100vh;
+  z-index: 1;
+  background-position: center;
+  background-image: url(desertttttcamp.png);
+  background-size: 135vh;
+  background-color: hsla(0,0%,100%,0.40);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  margin-top: 25px;
+  
+}
+
+.form--login {
+  text-align: left;
+  z-index: 1;
+  min-width: 40%;
+  
+  margin-bottom: 25px;
+}
+
+fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 4px;
+  border-style: groove;
+  border-color: slategray;
+  border-image: initial;
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight:bold
+}
