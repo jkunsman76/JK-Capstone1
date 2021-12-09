@@ -18,4 +18,4 @@ export const ApplicationViews = () => {
 
         </>
     )
-} //! need to setup log out function
+} 

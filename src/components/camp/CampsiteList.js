@@ -4,6 +4,8 @@ import CampsiteRepository from "../../repos/CampsiteRepository";
 import "./CampsiteList.css"
 
 
+//! need to make toilets the Favorite star!!!!!!!!!
+
 export const CampsiteList = () => {
     const [campsites, updateCampsites] = useState([])
     const history = useHistory()
@@ -37,13 +39,7 @@ export const CampsiteList = () => {
                     )
                 }
             </div>
-            <div>
-                <button onClick={evt => {
-                    evt.preventDefault()
-                    history.push("/campsites/create")
-                }}
-                    className="btn-MySites">My Created Sites</button>
-            </div>
+            
         </>
     )
 }
