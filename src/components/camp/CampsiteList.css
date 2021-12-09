@@ -1,0 +1,33 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+.siteList {
+    display:flex;
+    flex-direction:column;
+    margin:4px, 4px;
+    padding:4px;
+    background-color: rgb(218, 218, 218);
+    width: 500px;
+    text-align:justify;
+    height: 300px;
+    overflow:auto;
+    border: 5px solid red;
+}
+
+.sites {
+    
+}
+
+.btn-MySites {
+    
+}
