@@ -1,7 +1,7 @@
 import Settings from "./Settings"
 import { fetchIt } from "./Fetch"
 
-export default { 
+export default {
     async getAll() {
         return await fetchIt(`${Settings.remoteURL}/users`)
     }
