@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 import useSimpleAuth from "../../hooks/ui/useSimpleAuth";
 import "./NavBar.css"
 
@@ -11,7 +11,7 @@ import "./NavBar.css"
 
 export const NavBar = () => {
     const { isAuthenticated, logout, getCurrentUser } = useSimpleAuth()
-    const history = useHistory()
+
     return (
         <ul className="navbar">
                         <li className="navbar__item">

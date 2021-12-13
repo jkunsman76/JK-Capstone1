@@ -1,0 +1,32 @@
+
+
+
+
+
+.form-group {
+    display:grid;
+    max-width: 40%;
+    text-align:justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-description {
+    overflow:auto;
+    height: 50px;
+}
