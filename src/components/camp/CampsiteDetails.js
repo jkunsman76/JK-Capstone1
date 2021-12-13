@@ -1,24 +1,29 @@
 import React, { useEffect, useState } from "react"
-import { useParams,useHistory } from "react-router-dom";
-import { Link } from "react-router-dom"
-import CampsiteRepository from "../../repos/CampsiteRepository"
+import { useParams, useHistory } from "react-router-dom";
+import { GetCampCreator} from "../../repos/CampsiteRepository.js"
 import useSimpleAuth from "../../hooks/ui/useSimpleAuth"
 import "./Campsite.css"
 
 
-export default () => {
+export const CampsiteDetails = () => {
     const [camp, setCamp] = useState([])
     const { campsiteId } = useParams()
     const [currentUserId, setuserId] = useState({})
     const { getCurrentUser } = useSimpleAuth()
     const history = useHistory()
 
+
     useEffect(() => {
         setuserId(getCurrentUser)
     }, [])
 
     useEffect(() => {
-        CampsiteRepository.get(campsiteId).then(setCamp)
+        GetCampCreator(campsiteId)
+            
+            .then((campArray) => {
+                setCamp(campArray)
+            }
+        )
     }, [campsiteId])
     // have to wrap the "true" bc T-statements are truthy and not true 
     return (
@@ -55,7 +60,7 @@ export default () => {
             </form>
             <div>
                 <button className="btn-comment" onClick={() => history.push(`/campsites/${camp.id}`)}>Comment!</button>
-                {currentUserId.id === camp.userId ? <button className="btn-edit">Edit Site Info</button> : ""}
+                {currentUserId.id === camp.userId ? <button className="btn-edit" onClick={() => history.push(`/campsites/${camp.id}/create`)}>Edit Site Info</button> : ""}
             </div>
 
         </>
