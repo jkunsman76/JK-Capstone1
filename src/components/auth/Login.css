@@ -15,4 +15,6 @@ input[name="remember"] {
 
 .link--register {
     margin-top: 2rem;
+    font-weight: bold;
+    color: black;
 }

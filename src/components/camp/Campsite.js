@@ -16,20 +16,14 @@ export const Campsite = () => {
             </div>
             <div>
                 {CampsiteList()}
-                <div>
+                {/* <div>
                     <button onClick={evt => {
                         evt.preventDefault()
                         history.push("/campsites/mysites")
                     }}
                         className="btn-MySites">My Created Sites</button>
-                </div>
-                <div>
-                    <button onClick={evt => {
-                        evt.preventDefault()
-                        history.push("/campsites/create")
-                    }}
-                        className="btn-CreateSite">Create New Site</button>
-                </div>
+                </div> */}
+
             </div>
 
         </>
