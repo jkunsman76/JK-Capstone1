@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react"
-import {GetSiteId, CreateCampsite, DeleteSite, EditSite } from "../../repos/CampsiteRepository.js"
+import { GetSiteId, CreateCampsite, DeleteSite, EditSite } from "../../repos/CampsiteRepository.js"
 import useSimpleAuth from "../../hooks/ui/useSimpleAuth"
 import "./CampsiteForm.css"
 import { useHistory, useParams } from "react-router-dom"
@@ -9,6 +9,7 @@ import { useHistory, useParams } from "react-router-dom"
 
 
 export const CampsiteForm = () => {
+    //state variables
     const [campsite, updateCampsite] = useState({})
     const [userId, setuserId] = useState({})
     const { getCurrentUser } = useSimpleAuth()
@@ -31,7 +32,8 @@ export const CampsiteForm = () => {
 
     const constructNewCampsite = () => {
 
-        // object containing new campsite information being posted to api by the campsite repo function createCampsite, then history.push takes to main campsite page
+        // object containing new campsite information being posted to api by the campsite repo
+        // function createCampsite, then history.push takes to main campsite page
         // object is updated Onchange in the form below with user input based on id of input
 
 
@@ -58,7 +60,9 @@ export const CampsiteForm = () => {
             tentCamp: campsite.tentCamp,
             fire: campsite.fire,
             water: campsite.water,
-            dateCreated: new Date(),
+            wifi: campsite.wifi,
+            cellService:campsite.cellService,
+            dateCreated: Date.now(),
             photos: ""
 
         }
@@ -72,25 +76,23 @@ export const CampsiteForm = () => {
                 })
     }
 
-    //new func for radio buttons
+
     const userInput = (event) => {
-        const copy = { ...campsite }
-        copy[event.target.id] = event.target.value
-        updateCampsite(copy)
+        // copy of single campsite obj 
+        const campsiteObj = { ...campsite }
+        campsiteObj[event.target.id] = event.target.value
+        updateCampsite(campsiteObj)
     }
 
     const radioInput = (event) => {
-        const copy = { ...campsite }
-        copy[event.target.id] = JSON.parse(event.target.value)
-        updateCampsite(copy)
+        const campsiteObj = { ...campsite }
+        campsiteObj[event.target.id] = JSON.parse(event.target.value)
+        updateCampsite(campsiteObj)
     }
 
 
     const campsiteDelete = () => {
-
         DeleteSite(campsiteId)
-              
-          
     }
 
     return (
@@ -226,7 +228,15 @@ export const CampsiteForm = () => {
                     <label>Is there safe drinking water? <input type="radio" id="water" name="water" checked={campsite.water === true} value={campsite.water === true ? campsite.water : true} onChange={radioInput} />Yes</label>
                     <label><input type="radio" id="water" name="water" checked={campsite.water === false} value={campsite.water === false ? campsite.water : false} onChange={radioInput} />No</label>
                 </div>
-                <div>Upload Photos Here</div>
+                <div className="radio">
+                    <label>Is there Wifi? <input type="radio" id="wifi" name="wifi" checked={campsite.wifi === true} value={campsite.wifi === true ? campsite.wifi : true} onChange={radioInput} />Yes</label>
+                    <label><input type="radio" id="wifi" name="wifi" checked={campsite.wifi === false} value={campsite.wifi === false ? campsite.wifi : false} onChange={radioInput} />No</label>
+                </div>
+                <div className="radio">
+                    <label>Is there cell service? <input type="radio" id="cellService" name="cellService" checked={campsite.cellService === true} value={campsite.cellService === true ? campsite.cellService : true} onChange={radioInput} />Yes</label>
+                    <label><input type="radio" id="cellService" name="cellService" checked={campsite.cellService === false} value={campsite.cellService === false ? campsite.cellService : false} onChange={radioInput} />No</label>
+                </div>
+              
 
 
 

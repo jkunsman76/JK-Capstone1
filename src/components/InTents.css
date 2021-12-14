@@ -3,12 +3,14 @@
 
 /*Typography
 --------------------------------------------------------------*/
-body,
+body {
+height: max-content;
+}
 button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #0a0a0a;
 	font-family: 'Comfortaa', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
@@ -17,21 +19,24 @@ h1 {
   font-family: 'Patua One', serif;
   text-align: center;
   font-size: 60px;
+  color: chocolate;
 }
 h2 {
   font-family: 'Patua One', serif;
   font-size: 32px;
+  color: chocolate;
 }
 
 h3,h4,h5,h6 {
   font-family: 'Patua One', serif;
   letter-spacing: 2px;
+  color: chocolate;
 }
 
 p {
   margin-bottom: 1.5em;
   color: #d6fcff;
-  color: rgb(32, 25, 95);
+  color: rgb(0, 0, 0);
 }
 
 strong {
@@ -48,9 +53,9 @@ address {
   min-height: 100vh;
   z-index: 1;
   background-position: center;
-  background-image: url(desertttttcamp.png);
+  background-image:url('../components/imgs/desertttttcamp.png');
   background-size: 135vh;
-  background-color: hsla(0,0%,100%,0.40);
+  background-color: hsla(0,0%,70%,0.40);
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   margin-top: 25px;
@@ -75,8 +80,9 @@ fieldset {
   padding-block-end: 0.625em;
   min-inline-size: min-content;
   border-width: 4px;
-  border-style: groove;
-  border-color: slategray;
+  border-style: ridge;
+  border-radius: 10px;
+  border-color: rgb(17, 17, 17);
   border-image: initial;
   margin-top: 2px;
   font-size: 18px;
