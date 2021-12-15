@@ -25,7 +25,7 @@ export const CampsiteDetails = () => {
             }
             )
     }, [campsiteId])
-    // have to wrap the "true" bc T-statements are truthy and not true 
+    // have to wrap the "true" bc ternary are truthy and not true 
     return (
         <>
             <section className="campDetails">
@@ -38,20 +38,20 @@ export const CampsiteDetails = () => {
                     <p className="description">{camp.description}</p>
                     <h2 className="amenities">Here's the 100% Deet(s)!</h2>
                     <ul>
-                        <li className="Li">Does it have? Toilets:{`${camp.toilets}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Does it have? Showers:{`${camp.showers}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Does it have? Onsite Trash:{`${camp.trash}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Does it have? pinicTables:{`${camp.pinicTables}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Is it Free to Stay Here? :{`${camp.isFree}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Is It Pet Friendly?:{`${camp.petFriendly}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Is It Actually Dark at Night?:{`${camp.isDark}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Does it have? Front Row Parking:{`${camp.parking}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Does it have? Car Camping Sites:{`${camp.carCamp}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Does it have? Tent Sites:{`${camp.tentCamp}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Does it have? Fire Pits:{`${camp.fire}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Does it have? Safe Drinking Water:{`${camp.water}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Is There Wifi?:{`${camp.wifi}` === 'true' ? '✔️' : '❌'}</li>
-                        <li className="Li">Is There Cell Service?:{`${camp.cellService}` === 'true' ? '✔️' : '❌'}</li>
+                        <li className="Li">Does it have? Toilets:{`${camp.toilets}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Does it have? Showers:{`${camp.showers}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Does it have? Onsite Trash:{`${camp.trash}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Does it have? pinicTables:{`${camp.pinicTables}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Is it Free to Stay Here? :{`${camp.isFree}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Is It Pet Friendly?:{`${camp.petFriendly}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Is It Actually Dark at Night?:{`${camp.isDark}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Does it have? Front Row Parking:{`${camp.parking}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Does it have? Car Camping Sites:{`${camp.carCamp}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Does it have? Tent Sites:{`${camp.tentCamp}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Does it have? Fire Pits:{`${camp.fire}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Does it have? Safe Drinking Water:{`${camp.water}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Is There Wifi?:{`${camp.wifi}` === 'true' ? '✅' : '❌'}</li>
+                        <li className="Li">Is There Cell Service?:{`${camp.cellService}` === 'true' ? '✅' : '❌'}</li>
                         <li className="Li">Added by User: {`${camp.user?.name}`}</li>
                     </ul>
                 </div>

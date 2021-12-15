@@ -61,7 +61,7 @@ export const CampsiteForm = () => {
             fire: campsite.fire,
             water: campsite.water,
             wifi: campsite.wifi,
-            cellService:campsite.cellService,
+            cellService: campsite.cellService,
             dateCreated: Date.now(),
             photos: ""
 
@@ -81,6 +81,7 @@ export const CampsiteForm = () => {
         // copy of single campsite obj 
         const campsiteObj = { ...campsite }
         campsiteObj[event.target.id] = event.target.value
+        //index
         updateCampsite(campsiteObj)
     }
 
@@ -100,7 +101,7 @@ export const CampsiteForm = () => {
             <form className="campsiteForm">
                 <h2 className="campsiteForm__title">{campsiteId ? "Edit Campsite " : "New Campsite"}</h2>
                 <div className="form-group">
-                    <label htmlFor="campsiteName">Campsite name</label>
+                    <label className="form-label" htmlFor="campsiteName">Campsite name</label>
                     <input id="name" defaultValue={campsite.name} onChange={userInput}
                         type="text"
                         required
@@ -114,7 +115,7 @@ export const CampsiteForm = () => {
 
 
                 <div className="form-group">
-                    <label htmlFor="cityState">City, State </label>
+                    <label className="form-label" htmlFor="cityState">City, State </label>
                     <input id="cityState" defaultValue={campsite.cityState} onChange={userInput}
                         type="text"
                         required
@@ -125,7 +126,7 @@ export const CampsiteForm = () => {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="majorCity">Nearest Major City </label>
+                    <label className="form-label" htmlFor="majorCity">Nearest Major City </label>
                     <input id="majorCity" defaultValue={campsite.majorCity} onChange={userInput}
                         type="text"
                         required
@@ -136,7 +137,7 @@ export const CampsiteForm = () => {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="phoneNumber">Phone:</label>
+                    <label className="form-label" htmlFor="phoneNumber">Phone:</label>
                     <input id="phoneNumber" defaultValue={campsite.phoneNumber} onChange={userInput}
                         type="text"
                         required
@@ -147,7 +148,7 @@ export const CampsiteForm = () => {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="gpsCoordinates">GPS Coordinates </label>
+                    <label className="form-label" htmlFor="gpsCoordinates">GPS Coordinates </label>
                     <input id="gpsCoordinates" defaultValue={campsite.gpsCoordinates} onChange={userInput}
                         type="text"
                         required
@@ -158,7 +159,7 @@ export const CampsiteForm = () => {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="price">Price $</label>
+                    <label className="form-label" htmlFor="price">Price $</label>
                     <input id="price" defaultValue={campsite.price} onChange={userInput}
                         type="number"
                         pattern="[0-9]*"
@@ -170,8 +171,8 @@ export const CampsiteForm = () => {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="description">Description</label>
-                    <input id="description" defaultValue={campsite.description} onChange={userInput}
+                    <label className="form-label" htmlFor="description">Description</label>
+                    <textarea id="description" defaultValue={campsite.description} onChange={userInput}
                         type="text"
                         required
                         autoFocus
@@ -179,75 +180,64 @@ export const CampsiteForm = () => {
                         placeholder="exmp... Lovely place with... "
                     />
                 </div>
-
-                <div className="radio">
-                    <label>Toilets? <input type="radio" id="toilets" name="toilets" checked={campsite.toilets === true} value={campsite.toilets === true ? campsite.toilets : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="toilets" name="toilets" checked={campsite.toilets === false} value={campsite.toilets === false ? campsite.toilets : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Showers? <input type="radio" id="showers" name="showers" checked={campsite.showers === true} value={campsite.showers === true ? campsite.showers : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="showers" name="showers" checked={campsite.showers === false} value={campsite.showers === false ? campsite.showers : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Trash? <input type="radio" id="trash" name="trash" checked={campsite.trash === true} value={campsite.trash === true ? campsite.trash : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="trash" name="trash" checked={campsite.trash === false} value={campsite.trash === false ? campsite.trash : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Pinic Tables? <input type="radio" id="pinicTables" name="pinicTables" checked={campsite.pinicTables === true} value={campsite.pinicTables === true ? campsite.pinicTables : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="pinicTables" name="pinicTables" checked={campsite.pinicTables === false} value={campsite.pinicTables === false ? campsite.pinicTables : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Is it Free? <input type="radio" id="isFree" name="isFree" checked={campsite.isFree === true} value={campsite.isFree === true ? campsite.isFree : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="isFree" name="isFree" checked={campsite.isFree === false} value={campsite.isFree === false ? campsite.isFree : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Pet Friendly? <input type="radio" id="petFriendly" name="petFriendly" checked={campsite.petFriendly === true} value={campsite.petFriendly === true ? campsite.petFriendly : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="petFriendly" name="petFriendly" checked={campsite.petFriendly === false} value={campsite.petFriendly === false ? campsite.petFriendly : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Is it Dark at night for sleeping? <input type="radio" id="isDark" name="isDark" checked={campsite.isDark === true} value={campsite.isDark === true ? campsite.isDark : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="isDark" name="isDark" checked={campsite.isDark === false} value={campsite.isDark === false ? campsite.isDark : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Is there drive up parking to the site? <input type="radio" id="parking" name="parking" checked={campsite.parking === true} value={campsite.parking === true ? campsite.parking : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="parking" name="parking" checked={campsite.parking === false} value={campsite.parking === false ? campsite.parking : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Can you car camp here? <input type="radio" id="carCamp" name="carCamp" checked={campsite.carCamp === true} value={campsite.carCamp === true ? campsite.carCamp : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="carCamp" name="carCamp" checked={campsite.carCamp === false} value={campsite.carCamp === false ? campsite.carCamp : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Can you tent camp here? <input type="radio" id="tentCamp" name="tentCamp" checked={campsite.tentCamp === true} value={campsite.tentCamp === true ? campsite.tentCamp : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="tentCamp" name="tentCamp" checked={campsite.tentCamp === false} value={campsite.tentCamp === false ? campsite.tentCamp : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Are there fire pits? <input type="radio" id="fire" name="fire" checked={campsite.fire === true} value={campsite.fire === true ? campsite.fire : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="fire" name="fire" checked={campsite.fire === false} value={campsite.fire === false ? campsite.fire : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Is there safe drinking water? <input type="radio" id="water" name="water" checked={campsite.water === true} value={campsite.water === true ? campsite.water : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="water" name="water" checked={campsite.water === false} value={campsite.water === false ? campsite.water : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Is there Wifi? <input type="radio" id="wifi" name="wifi" checked={campsite.wifi === true} value={campsite.wifi === true ? campsite.wifi : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="wifi" name="wifi" checked={campsite.wifi === false} value={campsite.wifi === false ? campsite.wifi : false} onChange={radioInput} />No</label>
-                </div>
-                <div className="radio">
-                    <label>Is there cell service? <input type="radio" id="cellService" name="cellService" checked={campsite.cellService === true} value={campsite.cellService === true ? campsite.cellService : true} onChange={radioInput} />Yes</label>
-                    <label><input type="radio" id="cellService" name="cellService" checked={campsite.cellService === false} value={campsite.cellService === false ? campsite.cellService : false} onChange={radioInput} />No</label>
-                </div>
-              
-
-
-
-
-
-
-
-
-
-
-
+                <section>
+                    <div className="radio">
+                        <label>Toilets? <input type="radio" id="toilets" name="toilets" checked={campsite.toilets === true} value={campsite.toilets === true ? campsite.toilets : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="toilets" name="toilets" checked={campsite.toilets === false} value={campsite.toilets === false ? campsite.toilets : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Showers? <input type="radio" id="showers" name="showers" checked={campsite.showers === true} value={campsite.showers === true ? campsite.showers : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="showers" name="showers" checked={campsite.showers === false} value={campsite.showers === false ? campsite.showers : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Trash? <input type="radio" id="trash" name="trash" checked={campsite.trash === true} value={campsite.trash === true ? campsite.trash : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="trash" name="trash" checked={campsite.trash === false} value={campsite.trash === false ? campsite.trash : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Pinic Tables? <input type="radio" id="pinicTables" name="pinicTables" checked={campsite.pinicTables === true} value={campsite.pinicTables === true ? campsite.pinicTables : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="pinicTables" name="pinicTables" checked={campsite.pinicTables === false} value={campsite.pinicTables === false ? campsite.pinicTables : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Is it Free? <input type="radio" id="isFree" name="isFree" checked={campsite.isFree === true} value={campsite.isFree === true ? campsite.isFree : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="isFree" name="isFree" checked={campsite.isFree === false} value={campsite.isFree === false ? campsite.isFree : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Pet Friendly? <input type="radio" id="petFriendly" name="petFriendly" checked={campsite.petFriendly === true} value={campsite.petFriendly === true ? campsite.petFriendly : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="petFriendly" name="petFriendly" checked={campsite.petFriendly === false} value={campsite.petFriendly === false ? campsite.petFriendly : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Is it Dark at night for sleeping? <input type="radio" id="isDark" name="isDark" checked={campsite.isDark === true} value={campsite.isDark === true ? campsite.isDark : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="isDark" name="isDark" checked={campsite.isDark === false} value={campsite.isDark === false ? campsite.isDark : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Is there drive up parking to the site? <input type="radio" id="parking" name="parking" checked={campsite.parking === true} value={campsite.parking === true ? campsite.parking : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="parking" name="parking" checked={campsite.parking === false} value={campsite.parking === false ? campsite.parking : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Can you car camp here? <input type="radio" id="carCamp" name="carCamp" checked={campsite.carCamp === true} value={campsite.carCamp === true ? campsite.carCamp : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="carCamp" name="carCamp" checked={campsite.carCamp === false} value={campsite.carCamp === false ? campsite.carCamp : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Can you tent camp here? <input type="radio" id="tentCamp" name="tentCamp" checked={campsite.tentCamp === true} value={campsite.tentCamp === true ? campsite.tentCamp : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="tentCamp" name="tentCamp" checked={campsite.tentCamp === false} value={campsite.tentCamp === false ? campsite.tentCamp : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Are there fire pits? <input type="radio" id="fire" name="fire" checked={campsite.fire === true} value={campsite.fire === true ? campsite.fire : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="fire" name="fire" checked={campsite.fire === false} value={campsite.fire === false ? campsite.fire : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Is there safe drinking water? <input type="radio" id="water" name="water" checked={campsite.water === true} value={campsite.water === true ? campsite.water : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="water" name="water" checked={campsite.water === false} value={campsite.water === false ? campsite.water : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Is there Wifi? <input type="radio" id="wifi" name="wifi" checked={campsite.wifi === true} value={campsite.wifi === true ? campsite.wifi : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="wifi" name="wifi" checked={campsite.wifi === false} value={campsite.wifi === false ? campsite.wifi : false} onChange={radioInput} />No</label>
+                    </div>
+                    <div className="radio">
+                        <label>Is there cell service? <input type="radio" id="cellService" name="cellService" checked={campsite.cellService === true} value={campsite.cellService === true ? campsite.cellService : true} onChange={radioInput} />Yes</label>
+                        <label><input type="radio" id="cellService" name="cellService" checked={campsite.cellService === false} value={campsite.cellService === false ? campsite.cellService : false} onChange={radioInput} />No</label>
+                    </div>
+                </section>
 
                 <button type="submit"
                     onClick={
@@ -256,7 +246,7 @@ export const CampsiteForm = () => {
                             constructNewCampsite()
 
                         }}
-                    className="btn btn-primary">Save Campsite</button>
+                    className="btn-save">Save Campsite</button>
 
                 <button type="submit"
                     onClick={
@@ -267,7 +257,7 @@ export const CampsiteForm = () => {
 
                         }
                     }
-                    className="btn btn-primary">Delete Campsite</button>
+                    className="btn-delete">Delete Campsite</button>
             </form>
         </>
     )

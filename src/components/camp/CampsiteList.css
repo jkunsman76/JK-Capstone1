@@ -96,17 +96,12 @@
       height: 30px;
     }
   }
-.btn-MySites {
-    
-}
 
 .siteList__asideDiv{
     text-align: center;
     margin: 15px
   }
-.recentSites {
 
-}
 .recentSites__button {
 
   align-items: center;
@@ -192,7 +187,7 @@
   }
   
   .btn-CreateSite:hover {
-    box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+    box-shadow: rgb(6, 236, 6) 0 2px 8px;
     opacity: .85;
   }
   
@@ -201,7 +196,7 @@
   }
   
   .btn-CreateSite:focus {
-    box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+    box-shadow: rgb(6, 236, 6) 0 2px 8px;
   }
   
   @media (max-width: 15%) {
