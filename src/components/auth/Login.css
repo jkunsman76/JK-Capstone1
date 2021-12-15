@@ -8,7 +8,30 @@
 .form--login > fieldset > input[type="password"] {
     width: 25em;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #464d55 inset !important;
+    -webkit-text-fill-color:chocolate
+}
 
+.login-input {
+    align-items: center;
+    background-color: initial;
+    background-image: linear-gradient(#464d55, #25292e);
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    color: chocolate;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 12px;
+    height: 40px;
+    justify-content: center;
+}
 input[name="remember"] {
     margin: 1em 0.5em 0 0;
 }
@@ -18,3 +41,51 @@ input[name="remember"] {
     font-weight: bold;
     color: black;
 }
+.btn-signIn {
+
+    align-items: center;
+    background-color: initial;
+    background-image: linear-gradient(#464d55, #25292e);
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    color: chocolate;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 12px;
+    height: 40px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all 150ms;
+    vertical-align: baseline;
+    white-space: normal;
+  }
+  
+  .btn-signIn:hover {
+    box-shadow: rgb(6, 236, 6) 0 2px 8px;
+    opacity: .85;
+  }
+  
+  .btn-signIn:active {
+    outline: 0;
+  }
+  
+  .btn-signIn:focus {
+    box-shadow: rgb(6, 236, 6) 0 2px 8px;
+  }
+  
+  @media (max-width: 15%) {
+    .btn-signIn {
+      height: 30px;
+    }
+  }

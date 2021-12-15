@@ -47,7 +47,7 @@ const Login = () => {
                         <label htmlFor="inputName"> User Name </label>
                         <input type="name" onChange={handleUserInput}
                             id="name"
-                            className="form-control"
+                            className="login-input"
                             placeholder="Enter Your User Name"
                             required autoFocus />
                     </fieldset>
@@ -70,7 +70,7 @@ const Login = () => {
                         <label htmlFor="remember"> Remember Me </label>
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
+                        <button className="btn-signIn"type="submit">
                             Sign in
                     </button>
                     </fieldset>
