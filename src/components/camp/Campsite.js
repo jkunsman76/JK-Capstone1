@@ -1,13 +1,13 @@
 import React from "react";
 import { CampsiteList } from "./CampsiteList.js"
-import { useHistory } from "react-router-dom"
+
 
 
 
 
 
 export const Campsite = () => {
-    const history = useHistory()
+
 
     return (
         <>

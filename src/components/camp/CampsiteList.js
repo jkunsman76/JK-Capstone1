@@ -17,7 +17,7 @@ export const CampsiteList = () => {
                     (campArray) => {
                         updateCampsites(campArray)
                         FilterSites(campArray)
-                        // setting sites for display in main scroll box to be
+                        // setting sites for display in scroll box for filter
                     })
 
         },
@@ -43,7 +43,7 @@ export const CampsiteList = () => {
     //map converts data from state to state
     const citieMapArray = () => {
         const copyCampsites = [...campsites]
-        //converting campsite obj into string of the major vity
+        //converting campsite obj into string of the major city
         const cities = copyCampsites.map(campsite => campsite.majorCity)
         const uniqueCities = [...new Set(cities)]
         return uniqueCities
