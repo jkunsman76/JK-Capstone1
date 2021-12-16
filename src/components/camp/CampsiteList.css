@@ -26,12 +26,38 @@
     font-weight: bold;
     color: chocolate
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #464d55 inset !important;
+    -webkit-text-fill-color:chocolate
+}
+.cityFilterDropdown {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: chocolate;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 14px;
+  justify-content: center;
+  height: 25px
+}
+
 .siteList__div::-webkit-scrollbar {
     display: none;
   }
+
 .site_list{
     margin-right: 200px;
 }
+
 .siteList__div {
     flex-direction:column;
     padding:4px;
@@ -44,9 +70,6 @@
 
 }
 
-.sites {
-
-}
 .sites__buttons {
 
     align-items: center;
