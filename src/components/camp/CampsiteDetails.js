@@ -40,7 +40,7 @@ export const CampsiteDetails = () => {
                         frameborder="0"
                         src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDH2o-wKq_5JFZeNxt5aAYkTlYdcjyP8bk&q=${camp.gpsCoordinates}`} allowfullscreen>
                     </iframe>
-                    href=
+ 
                     <h3 className="description-header">A Brief Overview</h3>
                     <p className="description">{camp.description}</p>
                     <h2 className="amenities">Here's the 100% Deet(s)!</h2>
@@ -62,7 +62,7 @@ export const CampsiteDetails = () => {
                         <li className="Li">Added by User: {`${camp.user?.name}`}</li>
                     </ul>
 
-                </div>AIzaSyDH2o-wKq_5JFZeNxt5aAYkTlYdcjyP8bk
+                </div>
                 {/* <aside className="photos">
                 <div>Photos aside {camp.photos}</div>
             </aside>
