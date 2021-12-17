@@ -50,24 +50,22 @@ input-webkit-autofill:active  {
   height: 25px
 }
 
-.siteList__div::-webkit-scrollbar {
-    display: none;
-  }
-
 .site_list{
     margin-right: 200px;
 }
 
+.siteList__div::-webkit-scrollbar {
+    display: none;
+  }
+
+
 .siteList__div {
     flex-direction:column;
     padding:4px;
-    
-    
     max-width: 100%;
     text-align:center;
     height: 400px;
     overflow:auto;
-
 }
 
 .sites__buttons {
