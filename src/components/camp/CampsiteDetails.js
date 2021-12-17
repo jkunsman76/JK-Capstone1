@@ -34,6 +34,13 @@ export const CampsiteDetails = () => {
                     <h2 className="major-city"> Nearest Major City: {camp.majorCity}</h2>
                     <h2 className="contact-info"> Phone: {camp.phoneNumber} </h2>
                     <h3 className="GPS"> GPS Coordinates: {camp.gpsCoordinates}</h3>
+                    <iframe
+                        width="450"
+                        height="250"
+                        frameborder="0"
+                        src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDH2o-wKq_5JFZeNxt5aAYkTlYdcjyP8bk&q=${camp.gpsCoordinates}`} allowfullscreen>
+                    </iframe>
+                    href=
                     <h3 className="description-header">A Brief Overview</h3>
                     <p className="description">{camp.description}</p>
                     <h2 className="amenities">Here's the 100% Deet(s)!</h2>
@@ -54,7 +61,8 @@ export const CampsiteDetails = () => {
                         <li className="Li">Is There Cell Service?:{`${camp.cellService}` === 'true' ? '✅' : '❌'}</li>
                         <li className="Li">Added by User: {`${camp.user?.name}`}</li>
                     </ul>
-                </div>
+
+                </div>AIzaSyDH2o-wKq_5JFZeNxt5aAYkTlYdcjyP8bk
                 {/* <aside className="photos">
                 <div>Photos aside {camp.photos}</div>
             </aside>
