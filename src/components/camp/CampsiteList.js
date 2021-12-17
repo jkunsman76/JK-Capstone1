@@ -71,7 +71,7 @@ export const CampsiteList = () => {
                 <section className={"siteList"}>
                     <h1 className="heading">InTents</h1>
                     <div className="filterSelect">
-                        <label htmlFor="cityFilter">Filter by Major City </label>
+                        <label htmlFor="cityFilter">Filter by Major City: </label>
                         <select id="majorCity" onChange={input}
                             defaultValue=""
                             name="majorCity"

@@ -1,8 +1,8 @@
 ## InTents
 
-<b style="font-size: 20px;"><i>The LAST camping app you ever need!</i></b>
+<b style="font-size: 24px;"><i>The LAST camping app you ever need!</i></b>
 
-### Application Overview
+### Overview
 InTents is a camping application desinged to be easy to use and minialistic in nature, just like camping. It allows users to interact in real time with campsites and see up-to-date information about the places they plan to visit on thier next adventure. Never before has planing what to bring and how to be prepared been so simple. 
 
 ### Features
