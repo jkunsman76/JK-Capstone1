@@ -3,6 +3,9 @@ import { Route } from "react-router-dom"
 import {CampsiteDetails} from "./camp/CampsiteDetails"
 import {CampsiteForm} from "./camp/CampsiteForm"
 import {Campsite} from "./camp/Campsite"
+import { MyCampsites} from "./camp/MyCampsites"
+
+
 
 export const CampsiteRoutes = () => {
     return (
@@ -21,6 +24,9 @@ export const CampsiteRoutes = () => {
             </Route>
             <Route exact path="/campsites/:campsiteId(\d+)/create">
                 <CampsiteForm />
+            </Route>
+            <Route exact path="/campsites/mysites">
+                <MyCampsites />
             </Route>
         </>
     )

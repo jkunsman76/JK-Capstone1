@@ -47,7 +47,9 @@ address {
   margin: 0 0 1.5em;
 }
 
-
+.main--container{
+  background-color: black
+}
 .container--login {
   text-align: center;
   min-height: 100vh;

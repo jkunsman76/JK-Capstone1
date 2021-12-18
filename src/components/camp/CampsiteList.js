@@ -67,6 +67,13 @@ export const CampsiteList = () => {
                             })
                         }
                     </div>
+                    <div className="mysitesdiv">
+                        <button onClick={evt => {
+                            evt.preventDefault()
+                            history.push("/campsites/mysites")
+                        }}
+                            className="btn-MySites">My Created Sites</button>
+                    </div>
                 </aside>
                 <section className={"siteList"}>
                     <h1 className="heading">InTents</h1>

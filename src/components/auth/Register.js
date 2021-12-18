@@ -30,7 +30,9 @@ export const Register = () => {
 
 
     return (
-        <main className="container--login">
+        <main className="main--container">
+            
+            <div className="container--login">
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Join InTents!</h1>
                 <fieldset>
@@ -47,6 +49,7 @@ export const Register = () => {
                     </button>
                 </fieldset>
             </form>
+            </div>
         </main>
     )
 }
