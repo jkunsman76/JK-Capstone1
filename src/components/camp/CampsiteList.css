@@ -172,6 +172,61 @@ input-webkit-autofill:active  {
     height: 30px;
   }
 }
+.mysitesdiv{
+  text-align: center;
+}
+.btn-MySites {
+
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: chocolate;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 12px;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  margin: 15px;
+  outline: none;
+  overflow: hidden;
+  padding: 0px 20px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: normal;
+  width: 40%
+}
+
+.btn-MySites:hover {
+  box-shadow: rgb(6, 236, 6) 0 2px 8px;
+  opacity: .85;
+}
+
+.btn-MySites:active {
+  outline: 0;
+}
+
+.btn-MySites:focus {
+  box-shadow: rgb(6, 236, 6) 0 2px 8px;
+}
+
+@media (max-width: 15%) {
+  .btn-MySites {
+    height: 30px;
+  }
+}
+
+
+
 .createSite{
     text-align: center;
     margin: 40px;
